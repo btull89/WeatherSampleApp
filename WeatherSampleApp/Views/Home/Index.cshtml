@@ -1,0 +1,42 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<div data-bind="if: loading()">
+    <h3>Loading...</h3>
+</div>
+    <div style="display: none;" data-bind="visible: true, if: !loading()">
+        <div class="row">
+            <h1>Current Location</h1>
+        </div>
+        <div class="row">
+            <div class="col-md-2">
+                <h2>Date</h2>
+            </div>
+            <div class="col-md-2">
+                <h2>High</h2>
+            </div>
+            <div class="col-md-2">
+                <h2>Low</h2>
+            </div>
+        </div>
+        <hr />
+        <div data-bind="foreach: weather().daily.data()">
+            <div class="row">
+                <div class="col-md-2">
+                    <h4>
+                        <span data-bind="text: $root.getDateByOffset($index())"></span>
+                    </h4>
+                </div>
+                <div class="col-md-2">
+                    <h4>
+                        <span data-bind="text: temperatureMax()"></span>
+                    </h4>
+                </div>
+                <div class="col-md-2">
+                    <h4>
+                        <span data-bind="text: temperatureMin()"></span>
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>

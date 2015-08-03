@@ -1,0 +1,9 @@
+﻿How to use grunt: http://gruntjs.com/getting-started
+	1. install npm
+	2. install the grunt cli "npm install -g grunt-cli"
+	3. go to the tools folder in cmd prompt and type "npm install" to install the node modules.
+	4. type "grunt" to run the jshint task. It will watch for any js file changes and notify you if there are any issues. Keep it running.
+
+
+Curious out the requirejs optimizer was set up? Look here: http://blog.novanet.no/making-requirejs-play-nice-with-asp-net-mvc/
+	Look at the DeveloperNote in Scripts for js optimizer naming conventions.
