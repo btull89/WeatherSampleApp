@@ -10,9 +10,12 @@ namespace WeatherSampleApp.Helpers
         {
             var require = new StringBuilder();
 
-            var jsLocation = "/Scripts/app-built/";
+            // ReSharper disable once RedundantAssignment
+            var jsLocation = "";
 #if DEBUG
             jsLocation = "/Scripts/";
+#else
+            jsLocation = "/Scripts/app-built/";
 #endif
             const string appLocation = "app/";
 
